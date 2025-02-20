@@ -1,4 +1,4 @@
-import accounting from "accounting";
+// import { accounting } from "./accounting";
 
 const label = document.getElementById("conversion");
 
@@ -8,10 +8,11 @@ button.onclick = getInfo;
 
 function getInfo()
 {
-    //alert("getInfo ran");
+    // alert("getInfo ran");
     var currency1 = document.getElementById("currency1").value;
     var currency2 = document.getElementById("currency2").value;
     let amount = document.getElementById("amount").value;
+    // amount = parseFloat(amount);
 
     convertpt1(currency1, currency2, amount);
 }
@@ -20,19 +21,19 @@ function convertpt1(currency1, currency2, amount)
 {
     if(currency1 == "usd")
     {
-        convertUS(currency2, amount)
+        convertUS(currency2, amount);
     }
     else if(currency1 == "peso")
     {
-        convertPeso(currency2, amount)
+        convertPeso(currency2, amount);
     }
     else if(currency1 == "sterling")
     {
-        convertSterling(currency2, amount)
+        convertSterling(currency2, amount);
     }
     else if(currency1 == "yen")
     {
-        convertYen(currency2, amount)
+        convertYen(currency2, amount);
     }
 }
 
@@ -41,22 +42,26 @@ function convertUS(currency2, amount)
 {
     if(currency2 == "usd")
     {
-        label.textContent = accounting.formatMoney(amount, "$");
+        // label.textContent = accounting.formatMoney(amount, "$", 2, ",", ".");
+        label.textContent = "$ " + amount;
     }
     else if(currency2 == "peso")
     {
         conversion = amount * 20.450174;
-        label.textContent = accounting.formatMoney(conversion, "$");
+        // label.textContent = accounting.formatMoney(conversion, "$", 0);
+        label.textContent = "$ " + conversion;
     }
     else if(currency2 == "sterling")
     {
         conversion = amount * 0.79448874;
-        label.textContent = accounting.formatMoney(conversion, "£");
+        // label.textContent = accounting.formatMoney(conversion, "£");
+        label.textContent = "£ " + conversion;
     }
     else if(currency2 == "yen")
     {
         conversion = amount * 151.50253;
-        label.textContent = accounting.formatMoney(conversion, "¥");
+        // label.textContent = accounting.formatMoney(conversion, "¥");
+        label.textContent = "¥ " + conversion;
     }
     else
     {
@@ -69,21 +74,21 @@ function convertPeso(currency2, amount)
     if(currency2 == "usd")
     {
         conversion = amount * 0.048893808;
-        label.textContent = accounting.formatMoney(conversion, "$");
+        // label.textContent = accounting.formatMoney(conversion, "$");
     }
     else if(currency2 == "peso")
     {
-        label.textContent = accounting.formatMoney(amount, "$");
+        // label.textContent = accounting.formatMoney(amount, "$");
     }
     else if(currency2 == "sterling")
     {
         conversion = amount * 0.03884284;
-        label.textContent = accounting.formatMoney(conversion, "£");
+        // label.textContent = accounting.formatMoney(conversion, "£");
     }
     else if(currency2 == "yen")
     {
         conversion = amount * 7.4073315;
-        label.textContent = accounting.formatMoney(conversion, "¥");
+        // label.textContent = accounting.formatMoney(conversion, "¥");
     }
     else
     {
@@ -96,21 +101,21 @@ function convertSterling(currency2, amount)
     if(currency2 == "usd")
     {
         conversion = amount * 1.2586072;
-        label.textContent = accounting.formatMoney(conversion, "$");
+        // label.textContent = accounting.formatMoney(conversion, "$");
     }
     else if(currency2 == "peso")
     {
         conversion = amount * 25.745335;
-        label.textContent = accounting.formatMoney(conversion, "$");
+        // label.textContent = accounting.formatMoney(conversion, "$");
     }
     else if(currency2 == "sterling")
     {
-        label.textContent = accounting.formatMoney(amount, "£");
+        // label.textContent = accounting.formatMoney(amount, "£");
     }
     else if(currency2 == "yen")
     {
         conversion = amount * 190.68658;
-        label.textContent = accounting.formatMoney(conversion, "¥");
+        // label.textContent = accounting.formatMoney(conversion, "¥");
     }
     else
     {
@@ -123,21 +128,21 @@ function convertYen(currency2, amount)
     if(currency2 == "usd")
     {
         conversion = amount * 0.0066003972;
-        label.textContent = accounting.formatMoney(conversion, "$");
+        // label.textContent = accounting.formatMoney(conversion, "$");
     }
     else if(currency2 == "peso")
     {
         conversion = amount * 0.13501205;
-        label.textContent = accounting.formatMoney(conversion, "$");
+        // label.textContent = accounting.formatMoney(conversion, "$");
     }
     else if(currency2 == "sterling")
     {
         conversion = amount * 0.005244278;
-        label.textContent = accounting.formatMoney(conversion, "£");
+        // label.textContent = accounting.formatMoney(conversion, "£");
     }
     else if(currency2 == "yen")
     {
-        label.textContent = accounting.formatMoney(amount, "¥");
+        // label.textContent = accounting.formatMoney(amount, "¥");
     }
     else
     {
