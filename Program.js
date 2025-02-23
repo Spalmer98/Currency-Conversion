@@ -1,11 +1,13 @@
 // Main Conversion Program for currency conversion.
 
+// get the id for the label to change later in the code.
 const label = document.getElementById("conversion");
 
+// get button information so we can use the button to create an event to change the output label from above
 const button = document.getElementById('convertButton');
 button.onclick = getInfo;
 
-
+// Get the input from the user to start conversion process
 function getInfo()
 {
     // alert("getInfo ran");
@@ -16,6 +18,7 @@ function getInfo()
     convertpt1(currency1, currency2, amount);
 }
 
+// choose which conversion type the user wants to start with
 function convertpt1(currency1, currency2, amount)
 {
     if(currency1 == "usd")
@@ -36,7 +39,7 @@ function convertpt1(currency1, currency2, amount)
     }
 }
 
-
+// convert the amount from the user if the beginning currency is USD and display it to the label
 function convertUS(currency2, amount)
 {
     if(currency2 == "usd")
@@ -65,6 +68,7 @@ function convertUS(currency2, amount)
     }
 }
 
+// convert the amount from the user if the beginning currency is Pesos and display it to the label
 function convertPeso(currency2, amount)
 {
     if(currency2 == "usd")
@@ -92,6 +96,7 @@ function convertPeso(currency2, amount)
     }
 }
 
+// convert the amount from the user if the beginning currency is Sterling/Pounds and display it to the label
 function convertSterling(currency2, amount)
 {
     if(currency2 == "usd")
@@ -119,6 +124,7 @@ function convertSterling(currency2, amount)
     }
 }
 
+// convert the amount from the user if the beginning currency is Yen and display it to the label
 function convertYen(currency2, amount)
 {
     if(currency2 == "usd")
