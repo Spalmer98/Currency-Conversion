@@ -4,8 +4,6 @@ This software is designed to allow the user to choose between 4 common currencie
 
 My purpose for writing this code was to expand my knowledge and abitlities with JavaScript and to challenge myself with a problem I've never worked on before.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
-
 [Software Demo Video](https://youtu.be/ROWiOcMGSUA)
 
 # Development Environment
@@ -21,8 +19,6 @@ I used a library I located online to format the output currency so it displayed 
 - [Stack Overflow](https://stackoverflow.com/questions/16401107/how-to-include-javascript-libraries-in-my-own-script)
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
 
 - Design a better output screen to appeal better to an audience
 - Add more currencies for a wider range of options
